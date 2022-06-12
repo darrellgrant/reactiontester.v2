@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Reaction Tester Game</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="reaction.css">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="reaction.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <div id="banner">Reaction Tester</div>
-        <div id="info">
+    <div id="info">
+      <p>Click on the boxes and circles as quickly as you can!</p>
 
+      <div id="startSpace" class="buttonSpace">
+        <input type="button" id="startGame" class="button" value="START" />
+      </div>
 
-                <p>Click on the boxes and circles as quickly as you can!</p>
-            
-                <div id="startSpace" class="buttonSpace">
-                <input type="button" id="startGame" class="button" value="START">
-                </div>
-            
-                <div id="timeSpace" class="buttonSpace">
-                <p id="time" class="bold">Your time: <span id="timeTaken"></span></p>
-                </div>   
-                    
-                 <div id="averageSpace" class="buttonSpace">   
-                <button class="button" id="displayAvg">Display Your Average Time</button>
-                
-                <p id="showAvgTime"></p>
-                </div>
-            
-                <div id="resetSpace" class="buttonSpace">  
-                <button class="button" id="resetGame">Reset Game</button>
-                </div>
-        
-        </div>
-            
-        
-    <div id="container">
-        
-    <div id="shape" ></div>
-    
+      <div id="timeSpace" class="buttonSpace">
+        <p id="time" class="bold">Your time: <span id="timeTaken"></span></p>
+      </div>
+
+      <div id="averageSpace" class="buttonSpace">
+        <button class="button" id="displayAvg">
+          Display Your Average Time
+        </button>
+
+        <p id="showAvgTime"></p>
+      </div>
+
+      <div id="resetSpace" class="buttonSpace">
+        <button class="button" id="resetGame">Reset Game</button>
+      </div>
     </div>
 
+    <div id="container">
+      <div id="shape"></div>
+    </div>
 
-
-   
-<script src="reaction.js">
-   
-    </script>
-
-</body>
-</html> 
+    <script src="reaction.js"></script>
+  </body>
+</html>

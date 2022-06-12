@@ -1,4 +1,6 @@
 var start = new Date().getTime(); //time when page loads
+var beep = new Audio("sounds/beep.mp3");
+const music = new Audio("sounds/free-music-for-video-games.mp3");
 
 //button that starts the game
 //time starts (effectively) when START button is pushed
@@ -6,7 +8,31 @@ var start = new Date().getTime(); //time when page loads
 document.getElementById("startGame").onclick = function () {
   document.getElementById("shape").style.visibility = "visible";
   start = new Date().getTime();
+  //music.play();
+  playMusic();
 };
+
+function playMusic() {
+  //detect browser support for loop - 
+  //if supported, will be 'false' (by default) or will be 'undefined'
+  if (typeof music.loop == "boolean") {
+    music.loop = true;
+  } else
+  //if not supported by browser -
+  //use custom code:
+  {
+    music.addEventListener(
+      "ended",  //boolean value --> indicates whether the media element has ended playback
+      function () {
+        this.currentTime = 0;  //specifies the current playbacck time in seconds
+        this.play();
+      },
+
+      false
+    );
+  }
+  music.play();
+}
 
 function getRandomColor() {
   var letters = "0123456789ABCDEF".split(""); //Split a string into an array of substrings
@@ -69,8 +95,6 @@ if (count <= 20) {
 if (count > 30) {
   width = Math.random() * 100 + 30; //so shape will be at least 100px
 }
-
-var beep = new Audio("sounds/beep.mp3");
 
 document.getElementById("shape").onclick = function () {
   document.getElementById("shape").style.display = "none";
