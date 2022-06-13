@@ -13,22 +13,22 @@ document.getElementById("startGame").onclick = function () {
 };
 
 function playMusic() {
-  //detect browser support for loop - 
+  //detect browser support for loop -
   //if supported, will be 'false' (by default) or will be 'undefined'
   if (typeof music.loop == "boolean") {
     music.loop = true;
-  } else
+  }
   //if not supported by browser -
   //use custom code:
-  {
+  else {
     music.addEventListener(
-      "ended",  //boolean value --> indicates whether the media element has ended playback
+      "ended", //boolean value --> indicates whether the media element has ended playback
       function () {
-        this.currentTime = 0;  //specifies the current playbacck time in seconds
+        this.currentTime = 0; //specifies the current playbacck time in seconds
         this.play();
       },
 
-      false
+      false //useCapture (optional here, default is false)
     );
   }
   music.play();
