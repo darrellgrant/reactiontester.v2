@@ -46,6 +46,7 @@ function getRandomColor() {
   return color;
 }
 var count = -1;
+let scoreCount = 0;
 var totalTime = 0;
 var avgTime = 0;
 var width = Math.random() * 200 + 100; //so shape will be at least 100px
@@ -100,8 +101,15 @@ document.getElementById("shape").onclick = function () {
   document.getElementById("shape").style.display = "none";
   beep.play();
   var end = new Date().getTime();
+  const standardTime = 1.0;
   var timeTaken = (end - start) / 1000;
-  //alert(timeTaken);
+  //display diff color time
+  if (timeTaken >= standardTime) {
+    document.getElementById("timeTaken").style.color = "red";
+  } else {
+    document.getElementById("timeTaken").style.color = "green";
+  }
+
   document.getElementById("timeTaken").innerHTML = timeTaken + " seconds";
 
   totalTime += timeTaken;
