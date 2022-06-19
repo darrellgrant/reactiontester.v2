@@ -25,7 +25,7 @@ var avgTime = 0;
 var width = Math.random() * 200 + 100; //so shape will be at least 100px
 
 function makeShapeAppear() {
-  //var height = Math.random() * 500;
+ 
 
   var top = Math.random() * 400;
   var left = Math.random() * 800;
@@ -35,12 +35,7 @@ function makeShapeAppear() {
   } else {
     document.getElementById("shape").style.borderRadius = "0";
   }
-  //var color = ["red", "blue", "green", "yellow", "black"];
-  //console.log(color);
-  // var colorNum = Math.floor(Math.random() * 5);
-  //console.log(colorNum);
-  //var colorStyle = color[colorNum];
-  //console.log(colorStyle);
+ 
   document.getElementById("shape").style.top = top + "px"; //include "px"
   document.getElementById("shape").style.left = left + "px"; //include "px"
   document.getElementById("shape").style.backgroundColor = getRandomColor();
@@ -77,7 +72,7 @@ document.getElementById("shape").onclick = function () {
   beep.play();
   var end = new Date().getTime();
   var timeTaken = (end - start) / 1000;
-  //alert(timeTaken);
+  
   document.getElementById("timeTaken").innerHTML = timeTaken + " seconds";
 
   totalTime += timeTaken;
