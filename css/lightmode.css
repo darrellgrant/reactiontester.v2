@@ -1,66 +1,21 @@
-<<<<<<< HEAD
-        body{
-            font-family: sans-serif;
-            background-color: #eee;
-        }
-        #banner {
-            font-size: 80px;
-            color: #fff;
-            text-align: center;
-            height: 100px;
-            width: 100%;
-            background-color: cornflowerblue;
-        }
-        #shape {
-            height:200px;
-            width:200px;
-            /*background-color: red;*/
-            display: none;
-            position:relative;
-        }
-        .bold {
-            font-weight:bold;
-        }
-        #info {
-            width: 500px;
-            margin: 0 auto;
-        }
-        .button {
-            height:50px;
-            width: 80pxpx;
-            background-color: black;
-            color: white;
-            /*border-radius: 20px; */
-            border: none; 
-        }
-        
-        #resetGame{
-            display: none;
-        }
-@media screen and (max-width: 400px){
-    #banner{
-        width:100%;
-        font-size: 40px;
-        height: 60px;
-    }
-    #info{
-        width:100%
-    }
-}
-       
-=======
 body {
   font-family: sans-serif;
   background-color: #eee;
   margin: 0px;
+  padding: 0px;
 }
 #banner {
   font-size: 30px;
   color: #fff;
   text-align: center;
-  height: 40px;
+  height: 60px;
   width: 100%;
-  background-color: rgb(237, 100, 216);
+  background-color: #007acc;
+  padding-top: 10px;
+}
+#version-text {
+  font-size: 14px;
+  color: #acf0c4;
 }
 #shape {
   height: 150px;
@@ -74,8 +29,9 @@ body {
   font-weight: bold;
 }
 #info {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
+  font-size: 18px;
 }
 .button {
   height: 50px;
@@ -90,8 +46,12 @@ body {
   display: none;
 }
 
-.buttonSpace {
+/* .buttonSpace {
   float: left;
+} */
+
+#controls {
+  display: flex;
 }
 
 #container {
@@ -103,30 +63,60 @@ body {
   clear: both;
 }
 #time {
-  position: relative;
+  /* position: relative; */
   bottom: 15px;
 }
 
 #startSpace {
-  width: 70px;
-  height: 100px;
-}
-
-#timeSpace {
   width: 100px;
   height: 100px;
 }
 
-#averageSpace {
-  width: 125px;
-  height: 100px;
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
+#timeSpace {
+  width: 125px;
+  height: 25px;
+  font-size: 15px;
+  margin: 0px;
+}
+#timeTaken {
+  width: 125px;
+  height: 25px;
+  font-size: 15px;
+  margin: 0px;
+}
+
+#averageSpace {
+  width: 125px;
+}
+#showAvgTime {
+  width: 125px;
+  text-align: center;
+  padding-top: 5px;
+}
 #resetSpace {
-  width: 50px;
+  width: 150px;
   height: 100px;
   margin-left: 10px;
 }
+#endSpace {
+  width: 100px;
+  height: 100px;
+}
+
+#endBTN {
+  width: 100%;
+  height: 50px;
+  background-color: #dc143c;
+  color: #ffffff;
+  border: 0px;
+}
+
 @media screen and (max-width: 500px) {
   #banner {
     width: 100%;
@@ -168,4 +158,3 @@ body {
     font-size: 60%;
   }
 }
->>>>>>> develop
