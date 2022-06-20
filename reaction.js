@@ -55,7 +55,7 @@ function makeShapeAppear() {
   //var height = Math.random() * 500;
 
   var top = Math.random() * 400;
-  var left = Math.random() * 800;
+  var left = Math.random() * 1800; //have shapes extend further to the right of screen
   //make circle 50% of time
   if (Math.random() > 0.5) {
     document.getElementById("shape").style.borderRadius = "50%";

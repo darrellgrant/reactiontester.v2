@@ -3,7 +3,13 @@ body {
   background-color: #eee;
   margin: 0px;
   padding: 0px;
+  height: 100%;
 }
+
+html {
+  height: 100%;
+}
+
 #banner {
   font-size: 30px;
   color: #fff;
@@ -12,7 +18,33 @@ body {
   width: 100%;
   background-color: #007acc;
   padding-top: 10px;
+  display: flex;
 }
+#inner-banner-1 {
+  flex-grow: 1;
+}
+
+#inner-banner-2 {
+  flex-grow: 1;
+}
+
+#inner-banner-3 {
+  font-size: 16px;
+  flex-grow: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+#aboutSpace {
+  flex-grow: 1;
+}
+#githubSpace {
+  flex-grow: 1;
+}
+#modeSpace {
+  flex-grow: 1;
+}
+
 #version-text {
   font-size: 14px;
   color: #acf0c4;
@@ -55,13 +87,20 @@ body {
 }
 
 #container {
-  width: 1000px;
+  min-height: 100%;
+}
+#main {
+  padding-bottom: 40px;
+}
+#shape-container {
+  width: 100%;
   height: 600px;
-  margin: 0px auto;
-  /*            background-color: #555;*/
+  margin: 0px;
+  /* background-color: #555; */
   position: relative;
   clear: both;
 }
+
 #time {
   /* position: relative; */
   bottom: 15px;
@@ -115,6 +154,14 @@ body {
   background-color: #dc143c;
   color: #ffffff;
   border: 0px;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: #007acc;
+  margin-top: -40px;
+  clear: both;
 }
 
 @media screen and (max-width: 500px) {
