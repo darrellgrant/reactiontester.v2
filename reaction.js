@@ -1,15 +1,22 @@
 var start = new Date().getTime(); //time when page loads
 var beep = new Audio("sounds/beep.mp3");
 const music = new Audio("sounds/free-music-for-video-games.mp3");
+let isPaused = false; //if start btn pressed before restart btn, do not restart
 
 //button that starts the game
 //time starts (effectively) when START button is pushed
 //variable start is updated
 document.getElementById("startGame").onclick = function () {
   document.getElementById("shape").style.visibility = "visible";
-  start = new Date().getTime();
-  //music.play();
-  playMusic();
+
+  if (isPaused == true) {
+    alert("Please click 'Reset Game'!");
+    return; //if start btn pressed before restart btn, do not restart
+  } else {
+    start = new Date().getTime();
+    //music.play();
+    playMusic();
+  }
 };
 
 function playMusic() {
@@ -136,11 +143,22 @@ document.getElementById("shape").onclick = function () {
 document.getElementById("displayAvg").onclick = function () {
   document.getElementById("showAvgTime").innerHTML =
     avgTime.toFixed(2) + " seconds";
-  document.getElementById("resetGame").style.display = "block";
+  //move to END GAME function
   localStorage.setItem("avgTime", avgTime);
 };
 
 document.getElementById("resetGame").onclick = function () {
   document.getElementById("resetGame").style.display = "none";
+  isPaused = false;
   window.location.reload();
 };
+//*************************************************** */
+const endBTN = document.getElementById("endBTN");
+function endTheGame() {
+  document.getElementById("resetGame").style.display = "block";
+  music.pause();
+  document.getElementById("shape").style.display = "none";
+  isPaused = true; //<-----isPaused
+}
+
+endBTN.addEventListener("click", endTheGame);

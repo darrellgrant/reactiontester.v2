@@ -154,6 +154,8 @@ html {
   background-color: #dc143c;
   color: #ffffff;
   border: 0px;
+  cursor: pointer;
+
 }
 
 footer {
