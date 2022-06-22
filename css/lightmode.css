@@ -155,7 +155,10 @@ html {
   color: #ffffff;
   border: 0px;
   cursor: pointer;
-
+}
+#pointer {
+  width: 40px;
+  padding-left: 8px;
 }
 
 footer {
