@@ -2,7 +2,7 @@ var start = new Date().getTime(); //time when page loads
 var beep = new Audio("sounds/beep.mp3");
 const music = new Audio("sounds/free-music-for-video-games.mp3");
 let isPaused = false; //if start btn pressed before restart btn, do not restart
-
+let totalScore = 0;
 //button that starts the game
 //time starts (effectively) when START button is pushed
 //variable start is updated
@@ -129,6 +129,12 @@ document.getElementById("shape").onclick = function () {
     console.log("average time is: " + avgTime);
   }
 
+  //scoring
+  let score = getScoreCount(timeTaken);
+
+  totalScore += score;
+  console.log("The score: ", totalScore);
+
   if (count <= 20) {
     appearAfterDelay();
   } else {
@@ -162,3 +168,25 @@ function endTheGame() {
 }
 
 endBTN.addEventListener("click", endTheGame);
+/************************************************** */
+function getScoreCount(time) {
+  if (time <= 0.5) {
+    return 8;
+  }
+  if (time <= 0.6) {
+    return 6;
+  }
+  if (time <= 0.7) {
+    return 3;
+  }
+  if (time <= 0.8) {
+    return 2;
+  }
+  if (time <= 1.0) {
+    return 1;
+  }
+  if (time <= 1.5) {
+    return 0;
+  }
+  return -1;
+}
