@@ -6,5 +6,6 @@ In my version:
 1) The level of difficulty increases after 20 clicks (the shapes appear at a faster interval).
 2) The level of difficulty increases again after 30 clicks (the shapes are smaller).
 3) The game calculates the user's average reaction time
-4) I've implemented a "reset" button (initially hidden).
- 
+4) I've implemented a "reset" button to clear current stats.
+5) I've implemented music that plays thruought the game.
+6) I've implemented a scoring system.
