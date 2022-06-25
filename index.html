@@ -1,53 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Reaction Tester Game</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="reaction.css">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div id="banner">Reaction Tester</div>
-        <div id="info">
+    <link rel="stylesheet" type="text/css" href="css/lightmode.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/darkmode.css" /> -->
 
-
-                <p>Click on the boxes and circles as quickly as you can!</p>
-            
-                <div id="startSpace" class="buttonSpace">
-                <input type="button" id="startGame" class="button" value="START">
-                </div>
-            
-                <div id="timeSpace" class="buttonSpace">
-                <p id="time" class="bold">Your time: <span id="timeTaken"></span></p>
-                </div>   
-                    
-                 <div id="averageSpace" class="buttonSpace">   
-                <button class="button" id="displayAvg">Display Your Average Time</button>
-                
-                <p id="showAvgTime"></p>
-                </div>
-            
-                <div id="resetSpace" class="buttonSpace">  
-                <button class="button" id="resetGame">Reset Game</button>
-                </div>
-        
-        </div>
-            
-        
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <div id="container">
-        
-    <div id="shape" ></div>
-    
+      <div id="banner">
+        <div id="inner-banner-1">
+          <!--space-->
+        </div>
+        <div id="inner-banner-2">
+          Reaction Tester <span id="version-text">version 2.1</span>
+          <p id="info">
+            Objective: Click on the boxes and circles as quickly as you can!
+          </p>
+        </div>
+        <section id="inner-banner-3">
+          <div id="aboutSpace">
+            About
+            <!--about-->
+          </div>
+          <div id="githubSpace">
+            GitHub
+            <!--github-->
+          </div>
+          <div id="modeSpace">
+            <button>MODE</button>
+            <!--dark/light mode-->
+          </div>
+        </section>
+      </div>
+      <div id="controls">
+        <div id="startSpace">
+          <!--start BUTTON-->
+          <input
+            type="button"
+            id="startGame"
+            class="button"
+            value="START GAME"
+          />
+        </div>
+        <section class="subContainer">
+          <div id="timeSpace">
+            <!--time taken SPACE-->
+            <div id="time" class="bold">Your time:</div>
+          </div>
+          <div>
+            <div id="timeTaken"></div>
+          </div>
+        </section>
+        <section class="subContainer">
+          <div id="averageSpace">
+            <!--disp avg time BUTTON-->
+            <button class="button" id="displayAvg">
+              Display Your Average Time
+            </button>
+          </div>
+          <div id="showAvgTime"></div>
+        </section>
+
+        <div id="endSpace">
+          <button id="endBTN">END GAME</button>
+        </div>
+        <div id="pointerSpace">
+          <img id="pointer" src="img/point.png" alt="pointing finger" />
+        </div>
+        <div id="scoreSpace">
+          <div id="scoreCount"></div>
+        </div>
+
+        <div id="resetSpace">
+          <button class="button" id="resetGame">Reset Game</button>
+        </div>
+      </div>
+      <!--end controls-->
+      <div id="main">
+        <div id="shape-container">
+          <div id="shape"></div>
+        </div>
+      </div>
     </div>
+    <footer></footer>
 
-
-
-   
-<script src="reaction.js">
-   
+    <script src="reaction.js"></script>
+    <script>
+      src = "score.js";
     </script>
-
-</body>
-</html> 
+  </body>
+</html>
