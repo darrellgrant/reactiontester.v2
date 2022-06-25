@@ -8,4 +8,4 @@ In my version:
 3) The game calculates the user's average reaction time
 4) I've implemented a "reset" button to clear current stats.
 5) I've implemented music that plays thruought the game.
-6) I've implemented a scoring system.
+6) I've implemented a scoring system. (working)
