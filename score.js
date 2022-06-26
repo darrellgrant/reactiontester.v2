@@ -50,3 +50,8 @@ function updateTotalTime(value) {
     console.log("average time is: " + avgTime);
   }
 }
+
+
+function getTimeTaken(time){
+  return (time - start) / 1000;
+}
