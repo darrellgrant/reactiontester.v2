@@ -105,9 +105,6 @@ document.getElementById("shape").onclick = function () {
   var end = new Date().getTime();
   const standardTime = 1.0;
   var timeTaken = (end - start) / 1000;
-<<<<<<< HEAD
-  
-=======
   //display diff color time
   if (timeTaken >= standardTime) {
     document.getElementById("timeTaken").style.color = "red";
@@ -115,7 +112,6 @@ document.getElementById("shape").onclick = function () {
     document.getElementById("timeTaken").style.color = "green";
   }
 
->>>>>>> develop
   document.getElementById("timeTaken").innerHTML = timeTaken + " seconds";
 
   totalTime += timeTaken;
