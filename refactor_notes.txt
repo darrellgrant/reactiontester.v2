@@ -1,0 +1,18 @@
+
+Game object {
+    start() which calls Shape.appearAfterDelay() -new-
+    playMusic()
+    end() -new-
+    
+}
+
+Shape object {
+    appearAfterDelay()
+    beep
+    disappear() -new-
+
+}
+
+Score object {
+    ????
+}
