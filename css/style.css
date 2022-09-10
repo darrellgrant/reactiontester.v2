@@ -55,7 +55,7 @@ html {
   /*background-color: red;*/
   display: none;
   position: absolute;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .bold {
   font-weight: bold;
@@ -91,6 +91,7 @@ html {
 }
 #main {
   padding-bottom: 40px;
+  position: relative;
 }
 #shape-container {
   width: 100%;
@@ -100,6 +101,16 @@ html {
   position: relative;
   clear: both;
 }
+#modeBtn {
+  width: 175px;
+  height: 25px;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 #time {
   /* position: relative; */
@@ -108,7 +119,7 @@ html {
 
 #startSpace {
   width: 100px;
-  height: 100px;
+  height: 50px;
 }
 
 .subContainer {
@@ -130,22 +141,21 @@ html {
   margin: 0px;
 }
 
-#averageSpace {
+/* #averageSpace {
   width: 125px;
-}
-#showAvgTime {
+} */
+/* #showAvgTime {
   width: 125px;
   text-align: center;
   padding-top: 5px;
-}
+} */
 #resetSpace {
   width: 150px;
-  height: 100px;
-  margin-left: 10px;
+  height: 50px;
 }
 #endSpace {
   width: 100px;
-  height: 100px;
+  height: 50px;
 }
 
 #endBTN {
@@ -159,6 +169,7 @@ html {
 #pointer {
   width: 40px;
   padding-left: 8px;
+  padding-top: 3px;
 }
 
 footer {
@@ -168,6 +179,34 @@ footer {
   margin-top: -40px;
   clear: both;
 }
+#scoreText {
+  text-align: right;
+  font-size: 2rem;
+  padding-top: 8px;
+  margin-left: 5px;
+}
+
+#scoreCount {
+  width: 75px;
+  height: 100%;
+
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 8px;
+}
+/* #finalScoreSpace {
+  width: 400px;
+  height: 300px;
+  background-color: #007acc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+} */
 
 @media screen and (max-width: 500px) {
   #banner {

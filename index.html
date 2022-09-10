@@ -4,7 +4,7 @@
     <title>Reaction Tester Game</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="css/lightmode.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/darkmode.css" /> -->
 
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
@@ -32,7 +32,7 @@
             <!--github-->
           </div>
           <div id="modeSpace">
-            <button>MODE</button>
+            <button id="modeBtn">TURN DARK MODE <b>ON</b></button>
             <!--dark/light mode-->
           </div>
         </section>
@@ -56,19 +56,20 @@
             <div id="timeTaken"></div>
           </div>
         </section>
-        <section class="subContainer">
-          <div id="averageSpace">
+        <!-- <section class="subContainer">
+          <div id="averageSpace"> -->
             <!--disp avg time BUTTON-->
-            <button class="button" id="displayAvg">
+           <!--  <button class="button" id="displayAvg">
               Display Your Average Time
             </button>
           </div>
           <div id="showAvgTime"></div>
-        </section>
+        </section> -->
 
         <div id="endSpace">
           <button id="endBTN">END GAME</button>
         </div>
+        <div id="scoreText">Your Score:</div>
         <div id="pointerSpace">
           <img id="pointer" src="img/point.png" alt="pointing finger" />
         </div>
@@ -85,13 +86,14 @@
         <div id="shape-container">
           <div id="shape"></div>
         </div>
+        <!-- <div id="finalScoreSpace">Your Final Score:<br />
+        <div id="finalScoreDisplay">
+
+        </div> -->
+        </div>
       </div>
     </div>
-    <footer></footer>
 
     <script src="reaction.js"></script>
-    <script>
-      src = "score.js";
-    </script>
   </body>
 </html>
