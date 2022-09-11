@@ -48,8 +48,12 @@ class GameUI {
     this.currentBody.classList.toggle("dark-mode");
     if (this.currentBody.classList.contains("dark-mode")) {
       this.modeBtn.innerHTML = "TURN DARK MODE <b>OFF</b>";
+      this.startGame.style.backgroundColor = "blue";
+      this.endGame.style.backgroundColor = "blue";
     } else {
       this.modeBtn.innerHTML = "TURN DARK MODE <b>ON</b>";
+      this.startGame.style.backgroundColor = "black";
+      this.endGame.style.backgroundColor = "black";
     }
   }
 
@@ -97,10 +101,10 @@ class GameUI {
       return 2;
     }
     if (time <= 1.0) {
-      return 1;
+      return 0;
     }
     if (time <= 1.5) {
-      return 1;
+      return -1;
     }
     return 1;
   }
@@ -111,7 +115,7 @@ class GameUI {
     shape.style.display = "none";
     isPaused = true;
     this.startGame.removeAttribute("disabled");
-    //this.displayFinalScore();
+    this.shapeUI.lateShapeHandler();
   }
 
   /* displayFinalScore() {
@@ -150,6 +154,14 @@ class ShapeUI {
     }
 
     return color;
+  }
+
+  lateShapeHandler() {
+    if (isPaused) {
+      setTimeout(() => {
+        shape.style.display = "none";
+      }, 1000);
+    }
   }
 
   //create shape's width and height

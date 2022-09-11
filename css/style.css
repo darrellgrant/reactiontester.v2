@@ -10,6 +10,12 @@ html {
   height: 100%;
 }
 
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 #banner {
   font-size: 30px;
   color: #fff;
@@ -101,6 +107,7 @@ html {
   position: relative;
   clear: both;
 }
+
 #modeBtn {
   width: 175px;
   height: 25px;
