@@ -19,7 +19,7 @@ class GameUI {
     this.startGame.addEventListener("click", () => {
       this.gameMusic.playMusic();
       this.shapeUI.appearAfterDelay();
-      this.startGame.setAttribute("disabled", "");
+      //this.startGame.setAttribute("disabled", "");
     });
 
     this.resetGame = document.getElementById("resetGame");
@@ -49,11 +49,11 @@ class GameUI {
     if (this.currentBody.classList.contains("dark-mode")) {
       this.modeBtn.innerHTML = "TURN DARK MODE <b>OFF</b>";
       this.startGame.style.backgroundColor = "blue";
-      this.endGame.style.backgroundColor = "blue";
+      this.resetGame.style.backgroundColor = "blue";
     } else {
       this.modeBtn.innerHTML = "TURN DARK MODE <b>ON</b>";
       this.startGame.style.backgroundColor = "black";
-      this.endGame.style.backgroundColor = "black";
+      this.resetGame.style.backgroundColor = "black";
     }
   }
 
@@ -101,12 +101,12 @@ class GameUI {
       return 2;
     }
     if (time <= 1.0) {
-      return 0;
+      return 1;
     }
     if (time <= 1.5) {
-      return -1;
+      return 0;
     }
-    return 1;
+    return -1;
   }
 
   endTheGame() {
@@ -114,7 +114,7 @@ class GameUI {
     music.pause();
     shape.style.display = "none";
     isPaused = true;
-    this.startGame.removeAttribute("disabled");
+    //this.startGame.removeAttribute("disabled");
     this.shapeUI.lateShapeHandler();
   }
 
