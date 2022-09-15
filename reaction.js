@@ -115,7 +115,7 @@ class GameUI {
     shape.style.display = "none";
     isPaused = true;
     //this.startGame.removeAttribute("disabled");
-    this.shapeUI.lateShapeHandler();
+    clearTimeout(this.shapeUI.timeOutId);
   }
 
   /* displayFinalScore() {
@@ -141,7 +141,9 @@ class GameUI {
 }
 
 class ShapeUI {
-  constructor() {}
+  constructor() {
+    this.timeOutId = undefined;
+  }
 
   //create shape's background color
   getRandomColor() {
@@ -156,13 +158,13 @@ class ShapeUI {
     return color;
   }
 
-  lateShapeHandler() {
+  /* lateShapeHandler() {
     if (isPaused) {
       setTimeout(() => {
         shape.style.display = "none";
       }, 1000);
     }
-  }
+  } */
 
   //create shape's width and height
   makeShapeAppear = () => {
@@ -197,7 +199,7 @@ class ShapeUI {
       return;
     } else {
       //const shapeUI = new ShapeUI();
-      setTimeout(this.makeShapeAppear, Math.random() * 2000);
+      this.timeOutId = setTimeout(this.makeShapeAppear, Math.random() * 2000);
     }
   };
 }
