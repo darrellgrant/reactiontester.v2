@@ -27,6 +27,8 @@ class GameUI {
     this.resetGame.addEventListener("click", this.resetTheGame.bind(this));
     this.modeBtn = document.getElementById("modeBtn");
     this.modeBtn.addEventListener("click", this.changeMode.bind(this));
+    this.pointerBlack = document.getElementById("pointer");
+    this.pointerWhite = document.getElementById("pointer-white");
   }
 
   changeMode() {
@@ -36,10 +38,14 @@ class GameUI {
       this.modeBtn.innerHTML = "TURN DARK MODE <b>OFF</b>";
       this.startGame.style.backgroundColor = "blue";
       this.resetGame.style.backgroundColor = "blue";
+      this.pointerBlack.style.display = "none";
+      this.pointerWhite.style.display = "block";
     } else {
       this.modeBtn.innerHTML = "TURN DARK MODE <b>ON</b>";
       this.startGame.style.backgroundColor = "black";
       this.resetGame.style.backgroundColor = "black";
+      this.pointerBlack.style.display = "block";
+      this.pointerWhite.style.display = "none";
     }
   }
 
